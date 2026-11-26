@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg-page: #ffffff;
+  --bg-subtle: #f6f6f4;
+  --ink: #0b0b0b;
+  --ink-muted: #555555;
+  --lemon: #d9ff00;
+  --lemon-hover: #c8ee00;
+  --danger: #ff3b30;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg-page);
+  color: var(--ink);
+  font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-mono-tech {
+  font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+/* Subtle architectural drafting dots on white canvas */
+.drafting-bg {
+  background-color: #ffffff;
+  background-image: radial-gradient(#dcdcdc 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Crisp Swiss hard-line button & panel styles */
+.swiss-panel {
+  background: #ffffff;
+  border: 1.5px solid #0b0b0b;
+  box-shadow: 4px 4px 0 #0b0b0b;
+}
+
+.swiss-pill {
+  border: 1.5px solid #0b0b0b;
+  transition: transform 0.12s ease, background-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.swiss-pill:hover:not(:disabled) {
+  transform: translate(-1px, -1px);
+  box-shadow: 2px 2px 0 #0b0b0b;
+}
+
+.swiss-pill:active:not(:disabled) {
+  transform: translate(1px, 1px);
+  box-shadow: none;
+}
+
+/* Custom sleek scrollbar for side panel on short viewports */
+.thin-scroll::-webkit-scrollbar {
+  width: 5px;
+}
+.thin-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+}
